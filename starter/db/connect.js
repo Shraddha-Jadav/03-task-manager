@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
 const connectionString =
-    "mongodb+srv://shraddhajadav635:Shraddha@123@nodeexpressprojects.vzjh08s.mongodb.net/TASK_MANAGER?retryWrites=true&w=majority"
+    "mongodb+srv://shraddhajadav635:shraddha123@nodeexpressprojects.vzjh08s.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority&appName=NodeExpressProjects"
+ 
+const connectDB = (url) => {
+    console.log("Connected...")
+    return mongoose.connect(connectionString)
+}
 
-mongoose
-    .connect(connectionString)
-    .then(() => console.log("Connected to the db..."))
-    .catch((err) => console.log(err)
-)
-
+module.exports = connectDB
 // ysMsq474mgSPUkh6
